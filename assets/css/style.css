@@ -3,6 +3,7 @@
 
 :root {
     --primary-color: #2A1072;
+    --green: #0b580b;
     --white: #ffffff;
     --black: black;
     --gap: 3rem;
@@ -93,7 +94,7 @@ h6 {
     font-size: 2.3rem;
 }
 
-a {
+.menu a {
     text-decoration: none;
 }
 
@@ -115,4 +116,21 @@ a {
 .menu ul a {
     display: block;
     padding: 2rem;
+    position: relative;
+}
+
+.menu ul li a::after{
+    content: "";
+    position: absolute;
+    background-color: var(--green);
+    height: 0.2rem;
+    width: 0;
+    top:75%;
+    left: 50%;
+    transition: all 300ms ease-in-out;
+}
+
+.menu ul li a:hover::after{
+    width: 50%;
+    left:25%
 }
