@@ -3,24 +3,28 @@
 
 :root {
     --primary-color: #2A1072;
-    --green: #0b580b;
+    --secondary-color: #0b580b;
     --white: #ffffff;
     --black: black;
+    --light-gray: #d3d3d3;
     --gap: 3rem;
 }
-
-* {
-    margin: 0;
-    padding: 0;
+html {
+     box-sizing: border-box;
+     font-size: 62.5%;
+     scroll-behavior: smooth;
 }
 
-html {
-    font-size: 62.5%;
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 2rem;
+    line-height: 1.5;
 }
 
 .img-bg {
@@ -71,12 +75,16 @@ h6 {
     font-size: 3.5rem;
 }
 
-.section {
-    min-height: 100vh;
+a {
+    text-decoration: none;
+}
+
+section {
+    height: 100vh;
 }
 
 .main-content {
-    max-width: 1200px;
+    max-width: 120rem;
     margin: 0 auto;
     padding: var(--gap);
 }
@@ -87,7 +95,7 @@ h6 {
     left: 0;
     right: 0;
     width: 100%;
-    border-bottom: 0..5rem var(--black) solid;
+    border-bottom: 0.1rem var(--light-gray) solid;
 }
 
 .menu h1 {
@@ -122,7 +130,7 @@ h6 {
 .menu ul li a::after{
     content: "";
     position: absolute;
-    background-color: var(--green);
+    background-color: var(--secondary-color);
     height: 0.2rem;
     width: 0;
     top:75%;
@@ -133,4 +141,43 @@ h6 {
 .menu ul li a:hover::after{
     width: 50%;
     left:25%
+}
+
+.intro-content{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    align-items: center;
+    justify-items: center;
+    gap: var(--gap);
+    height: 100%;
+}
+
+.intro-text-content h2{
+    font-size: 6rem;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.intro-img img{
+    max-width: 100%;
+    height: auto;   
+}
+
+.top3{
+    height: 100vh;
+}
+
+.top3-content{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    max-width: 64rem;
+    
+}
+
+.top3-content h2, p{
+    margin-bottom: 3rem;
 }
