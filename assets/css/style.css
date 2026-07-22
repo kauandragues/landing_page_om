@@ -25,6 +25,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 2rem;
     line-height: 1.5;
+    overflow-x: hidden;
 }
 
 .img-bg {
@@ -278,4 +279,70 @@ section {
 
 .gallery-fig-item img:hover{
    transform: scale(1.15);
+}
+
+.price{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.price-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-width: 0;
+}
+
+.price-header{
+
+}
+
+.price-header h2,
+.price-header p
+{
+    text-align: center;
+    max-width: 64rem;
+    margin: 3rem 0 3rem 0;
+}
+
+.price-table{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+}
+
+.price-table table{
+    background-color: white;
+    color: var(--primary-color);
+    border-collapse: collapse;
+    position: relative;
+    min-width: 75rem;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.price-table caption{
+    color: var(--white);
+    font-size: 1.5rem;
+    font-style: italic;
+    position: absolute;
+    top: -2.5rem;
+}
+
+.price-table thead{
+    background-color: var(--light-gray);
+}
+
+.price-table th,
+.price-table td{
+    border: 0.1rem solid var(--light-gray);
+    padding: 1rem 2rem;
+    white-space: nowrap;
 }
